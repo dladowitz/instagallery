@@ -1,0 +1,25 @@
+<!DOCTYPE html lang="eng">
+<html>
+  <head>
+    <title>InstaGallery</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/flatley-bootstrap.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body class="container">
+    <div class="row">
+      <h1>{{title}}<small> by {{author.name}}</small></h1>
+      <p>{{description}}</p>
+    </div>
+    <div class="row">
+      <ul class="thumbnails">
+        {{#each elements}}
+          <li class="span3">
+            <a href="{{permalink}}" class="thumbnail" target="_blank">
+              <img src="{{data.image.src}}" title="{{data.image.caption}}"/>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </body>
+</html>
